@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('artical1',function(req,res) {
+app.get('/artical1',function(req,res) {
     res.send("articalone is in use");
 });
 
@@ -16,13 +16,13 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('artical2',function(req,res) {
+app.get('/artical2',function(req,res) {
     res.send("articaltwo is in use");
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-app.get('artical3',function(req,res) {
+app.get('/artical3',function(req,res) {
     res.send("articalthree is in use");
 });
 
