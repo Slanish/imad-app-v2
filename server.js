@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
 app.get('/artical1.html',function(req,res) {
     res.send(createtemplate(artical1));
 });
-var pool = new Pool(config)
+var pool = new Pool(config);
 app.get('/test-db', function(req,res){
     pool.query('select * from test',function(err,result){
         if(err){
@@ -74,8 +74,8 @@ app.get('/test-db', function(req,res){
         }else{
             res.send(JSON.stringfy(result));
         }
-    })
-})
+    });
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
